@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Encriptador</title>
+</head>
+<body>
+    <header id="header" class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="./assets/logo1.svg" alt="Logo da Alura">
+            </div>
+            <h1>Encriptador</h1>
+        </div>
+    </header>
+
+    <main id="main" class="main">
+        <div class="container">
+            <section class="container-texto">
+                <textarea id="texto" rows="6" placeholder="Digite seu texto"></textarea>
+
+                <div class="aviso">
+                    <img src="./assets/exclamation.svg" alt="">
+                    <p>Apenas letras minúsculas e sem acento.</p>
+                </div>
+                
+                <div class="container-buttons">
+                    <button class="btn-criptografar" onclick="criptografar()">Criptografar</button>
+                    <button class="btn-descriptografar" onclick="descriptografar()">Descriptografar</button>
+                </div>
+            </section>
+
+            <section class="container-criptografia">
+                <textarea id="texto-criptografado" class="texto-criptografado"></textarea>
+                <div class="container-notfound">
+                    <img src="./assets/not-found-img.svg" alt="">
+                    <h3>Nenhuma mensagem encontrada</h3>
+                    <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
+                </div>
+                <button class="btn-copiar" onclick="copiar()">Copiar</button>
+            </section>
+        </div>
+    </main>
+
+    <footer id="footer" class="footer">
+        <p>© 2022 Makson Douglas</p>
+        <div class="socials">
+            <a href="https://github.com/Makson19" title="GitHub" target="_blank">
+                <i class="fa fa-github"></i>
+            </a>
+
+            <a href="https://www.linkedin.com/in/maksondouglas" title="LinkedIn" target="_blank">
+                <i class="fa fa-linkedin"></i>
+            </a>
+        </div>
+    </footer>
+
+
+    <script src="./js/script.js"></script>
+</body>
+</html>

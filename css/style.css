@@ -1,0 +1,335 @@
+:root {
+    --bg: #E5DBFF;
+    --colorFirst: #5F3DC4;
+    --colorSecond: #000000;
+    --colorThird: #FFFFFF;
+    --colorFourth: #495057;
+    --colorFifth: #343A40;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    font-family: 'Inter', sans-serif;
+}
+
+/* ===== Estilizando a barra de rolagem do textarea ===== */
+/* Firefox*/
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #A8A8A8 #F1F1F1;
+}
+
+/* Chrome, Edge e Safari*/
+*::-webkit-scrollbar {
+    width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #F1F1F1;
+  }
+  
+*::-webkit-scrollbar-thumb {
+    background-color: #A8A8A8;
+    border-radius: 20px;
+    border: 3px solid #F1F1F1;
+}
+
+body {
+    background: var(--bg);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 144rem;
+    margin: 0 auto;
+}
+
+/* ===== Header ===== */
+.header .container {
+    display: flex;
+    align-items: center;
+    padding: 2.4rem 1.6rem;
+}
+
+.header .logo {
+    width: 3.2rem;
+    height: 4.8rem;
+}
+
+.header .logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.header h1 {
+    font-family: 'Inter', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 150%;
+    text-transform: uppercase;
+    color: var(--colorFirst);
+    margin-left: 3rem;
+}
+
+/* ===== Main ===== */
+.main .container-texto {
+    margin-top: 5.6rem;
+    padding: 0 1.6rem;
+}
+
+.main .container-texto textarea {
+    resize: none;
+    padding: 0 0.5rem;
+    width: 100%;
+    font-size: 3.2rem;
+    font-weight: 400;
+    line-height: 150%;
+    color: var(--colorFirst);
+    background: inherit;
+    height: 30rem;
+    outline: none;
+}
+
+.main .container-texto .aviso {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin: 1.6rem 0;
+}
+
+.main .container-texto .aviso img {
+    width: 1.6rem;
+    height: 1.6rem;
+}
+
+.main .container-texto .aviso p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 150%;
+    color: var(--colorFourth);
+}
+
+.main .container-texto .container-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+.main .container-texto .container-buttons .btn-criptografar,
+.main .container-texto .container-buttons .btn-descriptografar {
+    height: 6.7rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 150%;
+    border-radius: 2.4rem;
+    border: none;
+    outline: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.main .container-texto .container-buttons .btn-criptografar {
+    background: var(--colorFirst);
+    color: var(--colorThird);
+    font-size: 1.6rem;
+    line-height: 150%;
+}
+
+.main .container-texto .container-buttons .btn-criptografar:hover {
+    border: 1px solid var(--colorFirst);
+    background: var(--colorThird);
+    color: var(--colorFirst);
+}
+
+.main .container-texto .container-buttons .btn-descriptografar {
+    border: 1px solid var(--colorFirst);
+    color: var(--colorFirst);
+    font-size: 1.6rem;
+    line-height: 150%;
+}
+
+.main .container-texto .container-buttons .btn-descriptografar:hover {
+    background-color: var(--colorFirst);
+    color: var(--colorThird);
+}
+
+.main .container-criptografia {
+    margin: 6.4rem 1.6rem;
+    padding: 3.2rem;
+    position: relative;
+    background: var(--colorThird);
+    border-radius: 3.2rem;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+}
+
+.main .container-criptografia textarea {
+    width: 100%;
+    height: 12.2rem;
+    padding: 3.2rem 0;
+    resize: none;
+    color: var(--colorFourth);
+    background: inherit;
+    font-size: 2.4rem;
+    line-height: 150%;
+    outline: none;
+}
+
+.main .container-criptografia .container-notfound {
+    padding: 0 3.2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    text-align: center;
+    width: 100%;
+}
+
+.main .container-criptografia .container-notfound img {
+    display: none;
+}
+
+.main .container-criptografia .container-notfound h3 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 150%;
+    color: var(--colorFifth);
+}
+
+.main .container-criptografia .container-notfound p {
+    color: var(--colorFourth);
+    font-size: 1.6rem;
+    line-height: 150%;
+    margin-top: 1.6rem;
+}
+
+.main .container-criptografia .btn-copiar {
+    display: none;
+    margin-top: 3.2rem;
+    width: 100%;
+    height: 6.7rem;
+    border: 1px solid var(--colorFirst);
+    border-radius: 2.4rem;
+    font-size: 1.6rem;
+    line-height: 150%;
+    color: var(--colorFirst);
+    background: inherit;
+    transition: all 0.3s ease;
+}
+
+.main .container-criptografia .btn-copiar:hover {
+    border: none;
+    background: var(--colorFirst);
+    color: var(--colorThird);
+}
+
+/* ===== Footer ===== */
+.footer {
+    text-align: center;
+    padding: 3rem 0;
+    background: var(--colorFirst);
+    color: var(--colorThird);
+}
+
+.footer p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.footer .socials {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.footer .socials a {
+    text-decoration: none;
+}
+
+.footer .socials a:hover {
+    opacity: 0.7;
+}
+
+.footer .socials a i {
+    color: var(--colorThird);
+    font-size: 2.5rem;
+}
+
+
+/* ===== Media Queries ===== */
+@media screen and (min-width: 768px) {
+    .header .container {
+        padding: 7.3rem 4rem;
+    }
+
+    .main .container-texto {
+        padding: 0 4rem;
+    }
+
+    .main .container-texto .container-buttons {
+        flex-direction: row;
+    }
+
+    .main .container-texto .container-buttons .btn-criptografar,
+    .main .container-texto .container-buttons .btn-descriptografar {
+        flex: 1;
+    }
+
+    .main .container-criptografia {
+        margin: 6.4rem 4rem;
+    }
+}
+
+
+@media screen and (min-width: 1200px) {
+    .header .container {
+        padding: 0 4rem;
+        height: 17vh;
+    }
+
+    .main .container {
+        display: flex;
+        height: 71vh;
+        padding: 0 3rem;
+    }
+
+    .main .container-texto {
+        flex: 1.4;
+        margin-top: 3rem;
+    }
+
+    .main .container-texto textarea {
+        height: 42rem;
+        padding: 1rem;
+    }
+
+    .main .container-criptografia {
+        flex: 0.6;
+        margin-top: 3rem;
+    }
+
+    .main .container-criptografia textarea {
+        height: 78%;
+        padding: 0;
+    }
+
+    .main .container-criptografia .container-notfound img {
+        display: initial;
+        width: 25rem;
+    }
+
+    .main .container-criptografia .btn-copiar {
+        margin-top: 2.5rem;
+    }
+
+    .footer {
+        height: 12vh;
+    }
+}
